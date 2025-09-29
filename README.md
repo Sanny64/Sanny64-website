@@ -1,2 +1,2 @@
-# Sanny64-website
+# Sanny64
 Sanny's personal website
