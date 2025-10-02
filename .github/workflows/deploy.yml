@@ -8,9 +8,6 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: ./FRONTEND Sanny64
 
     steps:
       - name: Checkout Code
@@ -23,9 +20,11 @@ jobs:
 
       - name: Install dependencies
         run: npm i
+        working-directory: ./FRONTEND Sanny64
 
       - name: Build the project
         run: npm run build
+        working-directory: ./FRONTEND Sanny64
 
       - name: Deploy to Hetzner via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
