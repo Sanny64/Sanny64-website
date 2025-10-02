@@ -33,6 +33,7 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
+          security: loose
           passive: true
           local-dir: ./FRONTEND Sanny64/dist/
           server-dir: /public_html/
