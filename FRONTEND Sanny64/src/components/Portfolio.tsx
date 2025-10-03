@@ -1,6 +1,6 @@
 import React from 'react';
 import './Portfolio.css';
-import githubLightIcon from '../assets/githublight.svg';
+import githubLightIcon from '../assets/githubLight.svg';
 
 const Portfolio: React.FC = () => {
   const links = [
