@@ -8,7 +8,7 @@ export default function Header() {
   return (
     <header className="header" role="banner">
       <div className="header-content">
-        {/* Logo on the left */}
+        {/* Logo - Home link*/}
         <div className="logo-container">
           <a href="#home" aria-label="Home">
             <img 
@@ -21,12 +21,9 @@ export default function Header() {
           </a>
         </div>
 
-        {/* Navigation in the middle */}
+        {/* Navigation */}
         <nav aria-label="Main navigation" className="main-navigation">
           <ul role="menubar">
-            <li role="none">
-              <a href="#home" role="menuitem">{t.nav.home}</a>
-            </li>
             <li role="none">
               <a href="#about" role="menuitem">{t.nav.about}</a>
             </li>
@@ -39,7 +36,7 @@ export default function Header() {
           </ul>
         </nav>
 
-        {/* Settings menu on the right */}
+        {/* Settings menu */}
         <SettingsMenu />
       </div>
     </header>
