@@ -28,6 +28,7 @@ body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   transition: background-color 0.3s, color 0.3s;
+  
 }
 
 /* Skip link for accessibility */
@@ -236,23 +237,27 @@ body {
 
 @media (max-width: 640px) {
   .header-content {
-    flex-wrap: wrap;
-  }
-  
-  .main-navigation {
-    order: 3;
-    flex-basis: 100%;
-    margin-top: 1rem;
-  }
-  
-  .main-navigation ul {
-    justify-content: space-between;
+    flex-wrap: nowrap;  /* Changed from wrap */
     gap: 0.5rem;
   }
   
+  .logo {
+    width: 40px;  /* Smaller logo */
+    height: 40px;
+  }
+  
+  .main-navigation {
+    flex: 1;  /* Takes available space */
+  }
+  
+  .main-navigation ul {
+    justify-content: center;  /* Center the nav items */
+    gap: 0.25rem;  /* Tighter spacing */
+  }
+  
   .main-navigation a {
-    font-size: 0.85rem;
-    padding: 0.4rem 0.6rem;
+    font-size: 0.75rem;  /* Smaller text */
+    padding: 0.4rem 0.5rem;  /* Tighter padding */
   }
 }
 
@@ -269,6 +274,8 @@ body {
 .main-content {
   flex: 1;
   padding: 1rem;
+  background-color: var(--bg-primary);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 /* Responsive breakpoints */
