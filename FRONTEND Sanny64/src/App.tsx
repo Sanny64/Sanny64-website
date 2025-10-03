@@ -1,11 +1,19 @@
-import './App.css';
-import Portfolio from './components/Portfolio';
+import { ThemeProvider } from './context/ThemeContext';
+import { LanguageProvider } from './context/LanguageContext';
+import Layout from './components/layout/Layout';
+import './styles/globals.css';
 
 function App() {
   return (
-    <div className="App">
-      <Portfolio />
-    </div>
+    <ThemeProvider>
+      <LanguageProvider>
+        <Layout>
+          {/* Main app components */}
+          <h1></h1>
+          
+        </Layout>
+      </LanguageProvider>
+    </ThemeProvider>
   );
 }
 
