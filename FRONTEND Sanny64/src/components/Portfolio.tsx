@@ -1,10 +1,11 @@
 import React from 'react';
 import './Portfolio.css';
+import githubLightIcon from '../assets/githublight.svg';
 
 const Portfolio: React.FC = () => {
   const links = [
-    { name: 'GitHub', url: 'https://github.com/dein-username', icon: '💻' },
-    { name: 'E-Mail', url: 'mailto:webmaster@sanny64.de', icon: '✉️' },
+    { name: 'GitHub', url: 'https://github.com/Sanny64', icon: githubLightIcon, isImage: true },
+    { name: 'E-Mail', url: 'mailto:webmaster@sanny64.de', icon: '✉️', isImage: false },
   ];
 
   return (
@@ -22,7 +23,13 @@ const Portfolio: React.FC = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <span className="link-icon">{link.icon}</span>
+              <span className="link-icon">
+                {link.isImage ? (
+                  <img src={link.icon} alt={`${link.name} icon`} style={{ width: '24px', height: '24px' }} />
+                ) : (
+                  link.icon
+                )}
+              </span>
               {link.name}
             </a>
           ))}
