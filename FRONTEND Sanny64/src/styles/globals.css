@@ -9,6 +9,7 @@
 }
 
 [data-theme='dark'] {
+  /* Dark mode colors */
   --bg-primary: #1a1a1a;
   --bg-secondary: #2d2d2d;
   --text-primary: #ffffff;
@@ -54,17 +55,9 @@ body {
   flex-direction: column;
 }
 
-/* Header with border */
-.header {
-  padding: 1rem;
-  border-bottom: 1px solid var(--border);
-  background-color: var(--bg-primary);
-  transition: border-color 0.3s;
-}/* Add these styles to your globals.css */
-
 /* Header Layout */
 .header {
-  padding: 1rem;
+  padding: 1rem 2rem;
   border-bottom: 1px solid var(--border);
   background-color: var(--bg-primary);
   transition: border-color 0.3s;
@@ -74,13 +67,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
   gap: 2rem;
 }
 
 .logo-container {
-  flex-shrink: 0;
+  flex: 0 0 auto;
 }
 
 .logo {
@@ -99,14 +92,18 @@ body {
   flex: 1;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .main-navigation ul {
   display: flex;
+  justify-content: space-between;
   gap: 2rem;
   list-style: none;
   margin: 0;
   padding: 0;
+  width: 100%;
+  max-width: min(70vw, 800px);
 }
 
 .main-navigation a {
@@ -117,6 +114,7 @@ body {
   border-radius: 4px;
   transition: background-color 0.2s ease, color 0.2s ease;
   font-size: 1rem;
+  white-space: nowrap;
 }
 
 .main-navigation a:hover,
@@ -127,8 +125,10 @@ body {
 
 /* Settings Menu Styles */
 .settings-menu {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: flex-end;
   position: relative;
-  flex-shrink: 0;
 }
 
 .settings-trigger {
@@ -210,57 +210,6 @@ body {
   outline-offset: 2px;
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-  .header {
-    padding: 1rem;
-  }
-  
-  .header-content {
-    gap: 1rem;
-  }
-  
-  .main-navigation ul {
-    gap: 1rem;
-  }
-  
-  .main-navigation a {
-    padding: 0.5rem;
-    font-size: 0.9rem;
-  }
-  
-  .logo {
-    width: 48px;
-    height: 48px;
-  }
-}
-
-@media (max-width: 640px) {
-  .header-content {
-    flex-wrap: nowrap;  /* Changed from wrap */
-    gap: 0.5rem;
-  }
-  
-  .logo {
-    width: 40px;  /* Smaller logo */
-    height: 40px;
-  }
-  
-  .main-navigation {
-    flex: 1;  /* Takes available space */
-  }
-  
-  .main-navigation ul {
-    justify-content: center;  /* Center the nav items */
-    gap: 0.25rem;  /* Tighter spacing */
-  }
-  
-  .main-navigation a {
-    font-size: 0.75rem;  /* Smaller text */
-    padding: 0.4rem 0.5rem;  /* Tighter padding */
-  }
-}
-
 /* Footer with border */
 .footer {
   padding: 1rem;
@@ -278,20 +227,61 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Responsive breakpoints */
-@media (min-width: 768px) {
-  .header,
-  .footer {
-    padding: 1.5rem 2rem;
+/* Responsive design */
+@media (max-width: 640px) { /*Phone*/
+  .header {
+    padding: 1rem;
+  }
+
+  .header-content {
+    gap: 0.5rem;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
   }
   
-  .main-content {
-    padding: 2rem;
+  .main-navigation ul {
+    gap: 0.5rem;
+    max-width: none;
+  }
+  
+  .main-navigation a {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.5rem;
   }
 }
 
-@media (min-width: 1024px) {
-  .header,
+@media (max-width: 768px) { /*Tablet*/
+  .header {
+    padding: 1rem 1.5rem;
+  }
+  
+  .header-content {
+    gap: 1rem;
+  }
+  
+  .main-navigation ul {
+    gap: 1.5rem;
+  }
+  
+  .main-navigation a {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+  
+  .logo {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+@media (min-width: 1024px) { /*desktop*/
+  .header {
+    padding: 1.5rem 4rem;
+  }
+
   .footer {
     padding: 1.5rem 3rem;
   }
