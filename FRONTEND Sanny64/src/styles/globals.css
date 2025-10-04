@@ -228,6 +228,7 @@ body {
 }
 
 /* Responsive design */
+/* Responsive design */
 @media (max-width: 640px) { /*Phone*/
   .header {
     padding: 1rem;
@@ -253,31 +254,39 @@ body {
   }
 }
 
-@media (max-width: 768px) { /*Tablet*/
-  .header {
-    padding: 1rem 1.5rem;
-  }
-  
+@media (max-width: 640px) {
   .header-content {
-    gap: 1rem;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
   }
   
-  .main-navigation ul {
-    gap: 1.5rem;
+  /* On mobile, reduce flex to let items size naturally */
+  .logo-container,
+  .settings-menu {
+    flex: 0 0 auto;
   }
   
-  .main-navigation a {
-    padding: 0.5rem;
-    font-size: 0.9rem;
+  .main-navigation {
+    flex: 1;
   }
   
   .logo {
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .main-navigation ul {
+    justify-content: center;
+    gap: 0.25rem;
+  }
+  
+  .main-navigation a {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.5rem;
   }
 }
 
-@media (min-width: 1024px) { /*desktop*/
+@media (min-width: 1024px) { /*Desktop*/
   .header {
     padding: 1.5rem 4rem;
   }
