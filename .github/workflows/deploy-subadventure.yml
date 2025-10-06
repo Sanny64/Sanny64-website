@@ -1,12 +1,11 @@
-name: Build and Deploy to Hetzner 
+name: Build and Deploy SubAdventure to Hetzner
 
 on:
   push:
     branches:
       - main
-    paths: 
-      - 'FRONTEND Sanny64'
-      - 'BACKEND Sanny64'
+    paths:
+      - 'FRONTEND SubAdventure/**'
 
 jobs:
   build-and-deploy:
@@ -23,11 +22,11 @@ jobs:
 
       - name: Install dependencies
         run: npm i
-        working-directory: ./FRONTEND Sanny64
+        working-directory: ./FRONTEND SubAdventure
 
       - name: Build the project
         run: npm run build
-        working-directory: ./FRONTEND Sanny64
+        working-directory: ./FRONTEND SubAdventure
 
       - name: Deploy to Hetzner via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -37,7 +36,5 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
           security: loose
-          local-dir: ./FRONTEND Sanny64/dist/
-          server-dir: /public_html/
-          exclude: |
-            **/sub_adventure/**
+          local-dir: ./FRONTEND SubAdventure/dist/
+          server-dir: /public_html/sub_adventure/
