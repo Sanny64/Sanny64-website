@@ -1,0 +1,40 @@
+# Environment variables & sensitive config
+.env
+.env.*
+!.env.example
+BACKEND Sanny64/config/*
+BACKEND Sanny64/includes/*
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Dependencies
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Sites with private info
+FRONTEND Sanny64/src/components/pages/about/Portfolio.tsx

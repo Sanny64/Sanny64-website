@@ -1,9 +1,8 @@
-// SettingsMenu.tsx
 import { useState } from 'react';
-import { useTheme } from '../../hooks/useTheme';
-import { useLanguage } from '../../hooks/useLanguage';
+import { useTheme } from '../../../hooks/useTheme';
+import { useLanguage } from '../../../hooks/useLanguage';
 import { MoreVertical, Languages, Moon, Sun } from 'lucide-react';
-import type { Language } from '../../types';
+import type { Language } from '../../../types';
 
 export default function SettingsMenu() {
   const [isOpen, setIsOpen] = useState(false);
