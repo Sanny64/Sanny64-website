@@ -23,6 +23,10 @@ export interface Translations {
     about: string;
     projects: string;
     adventure: string;
+    placeholder_home: string;
+    placeholder_about: string;
+    placeholder_projects: string;
+    placeholder_login: string;
   };
   settings: {
     title: string;

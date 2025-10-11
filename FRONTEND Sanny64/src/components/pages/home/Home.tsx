@@ -1,5 +1,9 @@
+import { useLanguage } from "../../../hooks/useLanguage";
+
 export default function Home() {
-    return (
-        <p>Coming Soon! This website is work in progress still :D</p>
+  const { t } = useLanguage();  
+  
+  return (
+      <div>{t.nav.placeholder_home}</div>
     )
 }

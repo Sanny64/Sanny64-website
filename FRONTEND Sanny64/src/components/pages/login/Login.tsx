@@ -1,5 +1,9 @@
+import { useLanguage } from "../../../hooks/useLanguage";
+
 export default function Login() {
-    return (
-        <div>Login page is coming soon</div>
+  const { t } = useLanguage();  
+  
+  return (
+      <div>{t.nav.placeholder_login}</div>
     )
 }

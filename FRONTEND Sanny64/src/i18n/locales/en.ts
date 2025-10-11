@@ -6,6 +6,10 @@ export const en: Translations = {
     about: 'About me',
     projects: 'Projects',
     adventure: 'Adventure',
+    placeholder_login: 'Login page is still work in progress. Stay tuned!!',
+    placeholder_home: 'The homepage is still work in progress. Stay tuned!!',
+    placeholder_about: 'The about me page is still work in progress. Stay tuned!! ',
+    placeholder_projects: 'The projects page is still work in progress. Stay tuned!!',
   },
   settings: {
     title: 'Settings',
