@@ -1,8 +1,9 @@
 import { useState } from 'react';
-import { useTheme } from '../../../hooks/useTheme';
-import { useLanguage } from '../../../hooks/useLanguage';
-import { MoreVertical, Languages, Moon, Sun } from 'lucide-react';
-import type { Language } from '../../../types';
+import { useTheme } from '../../../../hooks/useTheme';
+import { useLanguage } from '../../../../hooks/useLanguage';
+import { MoreVertical, Languages, Moon, Sun, LogInIcon } from 'lucide-react';
+import type { Language } from '../../../../types';
+
 
 export default function SettingsMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,6 +34,18 @@ export default function SettingsMenu() {
       
       {isOpen && (
         <div className="settings-dropdown" role="menu" aria-label="Settings options">
+          <div className="settings-section">
+            <button
+              onClick={() => window.location.href = 'https://www.sanny64.de/login'}
+              role="menuitem"
+              aria-label={'Redirect to the login page'}
+              className="settings-option-button"
+            >
+              <LogInIcon size={20} />
+              <span>Login</span>
+            </button>
+          </div>
+
           <div className="settings-section">
             <button 
               onClick={() => handleLanguageChange(language === 'en' ? 'de' : 'en')}

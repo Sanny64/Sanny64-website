@@ -1,15 +1,5 @@
-export default function Logo() {
+export default function Project() {
     return (
-        <div className="logo-container">
-          <a href="/home" aria-label="Home">
-            <img 
-              src="/favicon.ico" 
-              alt="Website Logo" 
-              width="64" 
-              height="64"
-              className="logo"
-            />
-          </a>
-        </div>
+        <div>All my projects are gonna be listed here soon!</div>
     )
 }
