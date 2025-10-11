@@ -5,8 +5,8 @@ on:
     branches:
       - main
     paths: 
-      - 'FRONTEND Sanny64'
-      - 'BACKEND Sanny64'
+      - 'FRONTEND Sanny64/**'
+      - 'BACKEND Sanny64/**'
 
 jobs:
   build-and-deploy:
