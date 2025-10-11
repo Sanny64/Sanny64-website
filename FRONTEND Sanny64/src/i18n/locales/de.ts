@@ -9,7 +9,7 @@ export const de: Translations = {
     placeholder_login: 'Die Login-Seite ist noch in Arbeit. Bleib gespannt!!',
     placeholder_home: ' Die Homepage ist noch in Arbeit. Bleib gespannt!!',
     placeholder_about: 'Die "Über mich"-Seite ist noch in Arbeit. Bleib gespannt!! ',
-    placeholder_projects: 'Die "Projekte"-Seite ist noch in Arbeit. Bleib gepsannt!!',
+    placeholder_projects: 'Die "Projekte"-Seite ist noch in Arbeit. Bleib gespannt!!',
   },
   settings: {
     title: 'Einstellungen',

@@ -8,10 +8,10 @@ export default function NavBar() {
     <nav aria-label="Main navigation" className="main-navigation">
       <ul role="menubar">
         <li role="none">
-          <Link to="https://www.sanny64.de/about" role="menuitem">{t.nav.about}</Link>
+          <Link to="/about" role="menuitem">{t.nav.about}</Link>
         </li>
         <li role="none">
-          <Link to="https://www.sanny64.de/projects" role="menuitem">{t.nav.projects}</Link>
+          <Link to="/projects" role="menuitem">{t.nav.projects}</Link>
         </li>
         <li role="none">
           <Link to="https://adventure.sanny64.de" role="menuitem">{t.nav.adventure}</Link>

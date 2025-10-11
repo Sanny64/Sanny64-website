@@ -1,7 +1,9 @@
+import { Link } from "react-router-dom"
+
 export default function Logo() {
     return (
         <div className="logo-container">
-          <a href="https://www.sanny64.de/home" aria-label="Home">
+          <Link to="/home" role="menuitem">
             <img 
               src="/favicon.ico" 
               alt="Website Logo" 
@@ -9,7 +11,7 @@ export default function Logo() {
               height="64"
               className="logo"
             />
-          </a>
+          </Link>
         </div>
     )
 }
