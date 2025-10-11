@@ -14,7 +14,7 @@ export default function NavBar() {
           <Link to="https://www.sanny64.de/projects" role="menuitem">{t.nav.projects}</Link>
         </li>
         <li role="none">
-          <Link to="https://www.adventure.sanny64.de" role="menuitem">{t.nav.adventure}</Link>
+          <Link to="https://adventure.sanny64.de" role="menuitem">{t.nav.adventure}</Link>
         </li>
       </ul>
     </nav>
