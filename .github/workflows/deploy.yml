@@ -3,10 +3,7 @@ name: Build and Deploy to Hetzner
 on:
   push:
     branches:
-      - main
-    paths: 
-      - 'FRONTEND Sanny64/**'
-      - 'BACKEND Sanny64/**'
+      - main  
 
 jobs:
   build-and-deploy:
