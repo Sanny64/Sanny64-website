@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useTheme } from '../../../../hooks/useTheme';
 import { useLanguage } from '../../../../hooks/useLanguage';
 import { MoreVertical, Languages, Moon, Sun, LogInIcon } from 'lucide-react';
+import { useNavigate } from 'react-router-dom'; 
 import type { Language } from '../../../../types';
 
 
@@ -20,6 +21,8 @@ export default function SettingsMenu() {
     setIsOpen(false);
   };
 
+  const navigate = useNavigate();
+
   return (
     <div className="settings-menu">
       <button 
@@ -36,9 +39,9 @@ export default function SettingsMenu() {
         <div className="settings-dropdown" role="menu" aria-label="Settings options">
           <div className="settings-section">
             <button
-              onClick={() => window.location.href = 'https://www.sanny64.de/login'}
+              onClick={() => navigate("/login")}
               role="menuitem"
-              aria-label={'Redirect to the login page'}
+              aria-label="Redirect to the login page"
               className="settings-option-button"
             >
               <LogInIcon size={20} />
