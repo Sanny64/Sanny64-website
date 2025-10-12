@@ -1,5 +1,5 @@
 // Theme types
-export type Theme = 'light' | 'dark';
+export type Theme = 'dark' | 'light';
 
 export interface ThemeContextType {
   theme: Theme;
@@ -19,22 +19,41 @@ export interface LanguageContextType {
 // Translation structure
 export interface Translations {
   nav: {
-    home: string;
+    main: string;
+    logo: string;
+    home_redirect: string;
     about: string;
+    about_redirect: string;
     projects: string;
+    projects_redirect: string;
     adventure: string;
-    placeholder_home: string;
-    placeholder_about: string;
-    placeholder_projects: string;
-    placeholder_login: string;
+    adventure_redirect: string;
   };
   settings: {
+    menu: string;
+    icon: string;
     title: string;
-    language: string;
+    options: string;
+    login_redirect: string;
+    switch: string;
+    german: string;
+    english: string;
     theme: string;
-    lightMode: string;
     darkMode: string;
+    lightMode: string;
   };
+  home: {
+    placeholder: string;
+  },
+  login: {
+    placeholder: string;
+  },
+  about: {
+    placeholder: string;
+  },
+  projects: {
+    placeholder: string;
+  },
   footer: {
     rights: string;
   };

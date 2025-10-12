@@ -4,6 +4,6 @@ export default function Login() {
   const { t } = useLanguage();  
   
   return (
-      <div>{t.nav.placeholder_login}</div>
+      <div>{t.login.placeholder}</div>
     )
 }

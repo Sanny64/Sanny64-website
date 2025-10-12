@@ -4,6 +4,6 @@ export default function Projects() {
   const { t } = useLanguage();  
   
   return (
-      <div>{t.nav.placeholder_projects}</div>
+      <div>{t.projects.placeholder}</div>
     )
 }

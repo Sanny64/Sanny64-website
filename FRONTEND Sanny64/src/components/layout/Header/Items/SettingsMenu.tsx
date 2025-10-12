@@ -7,7 +7,7 @@ import type { Language } from '../../../../types';
 
 
 export default function SettingsMenu() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [ isOpen, setIsOpen ] = useState(false);
   const { theme, toggleTheme } = useTheme();
   const { language, setLanguage, t } = useLanguage();
 
@@ -24,7 +24,7 @@ export default function SettingsMenu() {
   const navigate = useNavigate();
 
   return (
-    <div className="settings-menu">
+    <div className="settings-menu" aria-label={t.settings.menu}>
       <button 
         onClick={() => setIsOpen(!isOpen)}
         aria-label={t.settings.title}
@@ -32,16 +32,16 @@ export default function SettingsMenu() {
         aria-haspopup="true"
         className="settings-trigger"
       >
-        <MoreVertical size={24} />
+        <MoreVertical size={24} aria-label={t.settings.icon} role="image"/>
       </button>
       
       {isOpen && (
-        <div className="settings-dropdown" role="menu" aria-label="Settings options">
+        <div className="settings-dropdown" role="menu" aria-label={t.settings.options}>
           <div className="settings-section">
             <button
               onClick={() => navigate("/login")}
               role="menuitem"
-              aria-label="Redirect to the login page"
+              aria-label={t.settings.login_redirect}
               className="settings-option-button"
             >
               <LogInIcon size={20} />
@@ -52,7 +52,8 @@ export default function SettingsMenu() {
           <div className="settings-section">
             <button 
               onClick={() => handleLanguageChange(language === 'en' ? 'de' : 'en')}
-              aria-label={`Switch to ${language === 'en' ? 'German' : 'English'} language`}
+              role="menuitem"
+              aria-label={`${t.settings.switch} ${language === 'en' ? t.settings.german : t.settings.english}`}
               className="settings-option-button"
             >
               <Languages size={20} />
@@ -63,7 +64,8 @@ export default function SettingsMenu() {
           <div className="settings-section">
             <button 
               onClick={handleThemeToggle}
-              aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+              role="menuitem"
+              aria-label={`${t.settings.switch} ${theme === 'light' ? t.settings.darkMode : t.settings.lightMode}`}
               className="settings-option-button"
             >
               {theme === 'light' ? (

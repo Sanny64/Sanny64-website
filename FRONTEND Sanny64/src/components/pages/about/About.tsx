@@ -4,6 +4,6 @@ export default function About() {
   const { t } = useLanguage();  
   
   return (
-      <div>{t.nav.placeholder_about}</div>
+      <div>{t.about.placeholder}</div>
     )
 }
