@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'FRONTEND Auth/**'
 
 jobs:
   build-and-deploy:

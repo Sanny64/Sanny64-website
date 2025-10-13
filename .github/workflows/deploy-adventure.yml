@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'FRONTEND Adventure/**'
 
 jobs:
   build-and-deploy:
