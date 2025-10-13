@@ -1,9 +1,11 @@
-name: Build and Deploy to Hetzner 
+name: Build and Deploy Adventure to Hetzner
 
 on:
   push:
     branches:
-      - main  
+      - main
+    paths:
+      - 'FRONTEND Adventure/**'
 
 jobs:
   build-and-deploy:
@@ -20,11 +22,11 @@ jobs:
 
       - name: Install dependencies
         run: npm i
-        working-directory: ./FRONTEND Sanny64
+        working-directory: ./FRONTEND Adventure
 
       - name: Build the project
         run: npm run build
-        working-directory: ./FRONTEND Sanny64
+        working-directory: ./FRONTEND Adventure
 
       - name: Deploy to Hetzner via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -34,8 +36,5 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
           security: loose
-          local-dir: ./FRONTEND Sanny64/dist/
-          server-dir: /public_html/
-          exclude: |
-            **/adventure/**
-            **/authentication/**
+          local-dir: ./FRONTEND Adventure/dist/
+          server-dir: /public_html/adventure/

@@ -1,11 +1,11 @@
-name: Build and Deploy SubAdventure to Hetzner
+name: Build and Deploy Authentication service to Hetzner
 
 on:
   push:
     branches:
       - main
     paths:
-      - 'FRONTEND SubAdventure/**'
+      - 'FRONTEND Auth/**'
 
 jobs:
   build-and-deploy:
@@ -22,11 +22,11 @@ jobs:
 
       - name: Install dependencies
         run: npm i
-        working-directory: ./FRONTEND SubAdventure
+        working-directory: ./FRONTEND Auth
 
       - name: Build the project
         run: npm run build
-        working-directory: ./FRONTEND SubAdventure
+        working-directory: ./FRONTEND Auth
 
       - name: Deploy to Hetzner via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
@@ -36,5 +36,5 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           protocol: ftps
           security: loose
-          local-dir: ./FRONTEND SubAdventure/dist/
-          server-dir: /public_html/sub_adventure/
+          local-dir: ./FRONTEND Auth/dist/
+          server-dir: /public_html/authentication/

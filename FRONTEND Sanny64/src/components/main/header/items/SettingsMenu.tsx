@@ -14,7 +14,7 @@ export default function SettingsMenu() {
   const navigate = useNavigate();
 
   const handleLoginClick = () => {
-    navigate("/login");
+    navigate("https://www.auth.sanny64.de");
     setIsOpen(false);
   };
 

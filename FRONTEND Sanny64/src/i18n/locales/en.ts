@@ -1,6 +1,5 @@
 import type { Translations } from '../../types';
 
-
 export const en: Translations = {
   nav: {
     main: 'Main navigation',
