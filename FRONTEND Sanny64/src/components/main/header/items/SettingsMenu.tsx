@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { useTheme } from '../../../../hooks/useTheme';
 import { useLanguage } from '../../../../hooks/useLanguage';
 import { MoreVertical, Languages, Moon, Sun, LogInIcon } from 'lucide-react';
-import { useNavigate } from 'react-router-dom'; 
 import type { Language } from '../../../../types';
 
 
@@ -11,10 +10,8 @@ export default function SettingsMenu() {
   const { theme, toggleTheme } = useTheme();
   const { language, setLanguage, t } = useLanguage();
 
-  const navigate = useNavigate();
-
   const handleLoginClick = () => {
-    navigate("https://www.auth.sanny64.de");
+    window.location.href = "https://auth.sanny64.de"
     setIsOpen(false);
   };
 
