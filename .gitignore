@@ -35,6 +35,3 @@ dist-ssr
 *.tmp
 *.temp
 .cache/
-
-# Sites with private info
-FRONTEND Sanny64/src/components/pages/about/Portfolio.tsx
