@@ -1,6 +1,6 @@
-import Logo from './Items/Logo';
-import NavBar from './Items/Navbar';
-import SettingsMenu from './Items/SettingsMenu';
+import Logo from './items/Logo';
+import NavBar from './items/Navbar';
+import SettingsMenu from './items/SettingsMenu';
 
 export default function Header() {
     return (

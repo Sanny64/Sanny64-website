@@ -26,7 +26,7 @@ export const de: Translations = {
     lightMode: 'Heller Modus',
   },
   home: {
-    placeholder: ' Die Homepage ist noch in Arbeit. Bleib gespannt!!',
+    placeholder: ' Die Startseite ist noch in Arbeit. Bleib gespannt!!',
   },
   login: {
     placeholder: 'Die Login-Seite ist noch in Arbeit. Bleib gespannt!!',

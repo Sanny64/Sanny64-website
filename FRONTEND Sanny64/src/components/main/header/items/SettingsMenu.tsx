@@ -11,6 +11,13 @@ export default function SettingsMenu() {
   const { theme, toggleTheme } = useTheme();
   const { language, setLanguage, t } = useLanguage();
 
+  const navigate = useNavigate();
+
+  const handleLoginClick = () => {
+    navigate("/login");
+    setIsOpen(false);
+  };
+
   const handleLanguageChange = (newLanguage: Language) => {
     setLanguage(newLanguage);
     setIsOpen(false);
@@ -20,8 +27,6 @@ export default function SettingsMenu() {
     toggleTheme();
     setIsOpen(false);
   };
-
-  const navigate = useNavigate();
 
   return (
     <div className="settings-menu" aria-label={t.settings.menu}>
@@ -39,7 +44,7 @@ export default function SettingsMenu() {
         <div className="settings-dropdown" role="menu" aria-label={t.settings.options}>
           <div className="settings-section">
             <button
-              onClick={() => navigate("/login")}
+              onClick={handleLoginClick}
               role="menuitem"
               aria-label={t.settings.login_redirect}
               className="settings-option-button"
