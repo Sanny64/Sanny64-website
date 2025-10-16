@@ -4,6 +4,6 @@ export default function About() {
   const { t } = useLanguage();  
   
   return (
-      <div>{t.about.placeholder}</div>
+      <div className="content">{t.about.placeholder}</div>
     )
 }

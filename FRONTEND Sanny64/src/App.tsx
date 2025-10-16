@@ -6,8 +6,8 @@ import Home from './components/pages/home/Home';
 import About from './components/pages/about/About';
 import Projects from './components/pages/projects/Projects';
 import Portfolio from './components/pages/about/Portfolio';
+import Settings from './components/pages/settings/Settings';
 import './styles/globals.css';
-
 
 function App() {
   return (
@@ -21,6 +21,7 @@ function App() {
               <Route path="/about" element={<About />} />
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/projects" element={<Projects />} />
+              <Route path="/settings" element={<Settings />} />
               <Route path="*" element={<Navigate to="/" replace />} />         
             </Routes>
           </Main>

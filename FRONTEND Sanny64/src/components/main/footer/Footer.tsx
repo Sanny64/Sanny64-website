@@ -5,7 +5,7 @@ export default function Footer() {
 
   return (
     <footer className="footer">
-      <p>&copy; {new Date().getFullYear()} - {t.footer.rights}</p>
+      <p className="footer-content">&copy; {new Date().getFullYear()} - {t.footer.rights}</p>
     </footer>
   );
 }

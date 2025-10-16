@@ -4,6 +4,6 @@ export default function Home() {
   const { t } = useLanguage();  
   
   return (
-      <div>{t.home.placeholder}</div>
+      <div className="content">{t.home.placeholder}</div>
     )
 }

@@ -21,6 +21,7 @@ export interface Translations {
   nav: {
     main: string;
     logo: string;
+    home: string;
     home_redirect: string;
     about: string;
     about_redirect: string;
@@ -28,20 +29,35 @@ export interface Translations {
     projects_redirect: string;
     adventure: string;
     adventure_redirect: string;
-  };
+    open_menu: string;
+    close_menu: string;
+    settings_redirect: string;
+    coded_by: string;
+  },
+  options: {
+    menu: string;
+    title: string;
+    icon: string;
+    login_redirect: string;
+    settings_redirect: string;
+    settings: string;
+  },
   settings: {
     menu: string;
-    icon: string;
     title: string;
-    options: string;
-    login_redirect: string;
     switch: string;
     german: string;
     english: string;
     theme: string;
     darkMode: string;
     lightMode: string;
-  };
+    theme_description: string;
+    light_description: string;
+    dark_description: string;
+    language: string;
+    language_description: string;
+    saved_info: string;
+  },
   home: {
     placeholder: string;
   },
