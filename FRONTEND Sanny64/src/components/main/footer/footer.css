@@ -1,0 +1,12 @@
+/* Footer Styles extracted from globals.css */
+.footer {
+	border-top: 1px solid var(--border);
+	background-color: var(--bg-primary);
+	text-align: center;
+	text-size-adjust: 90%;
+	padding: 0.125rem;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+	.footer-content { font-size: var(--font-size-xl); }
+}

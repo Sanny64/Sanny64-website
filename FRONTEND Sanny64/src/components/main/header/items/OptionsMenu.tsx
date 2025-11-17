@@ -3,7 +3,7 @@ import { MoreVertical, LogInIcon, LucideSettings } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useLanguage } from '../../../../hooks/useLanguage';
 
-export default function optionsMenu() {
+export default function OptionsMenu() {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const navigate = useNavigate();
@@ -30,8 +30,8 @@ export default function optionsMenu() {
     setIsOpen(false);
   };
 
-  const handleoptionsClick = () => {
-    navigate("/settings")
+  const handleOptionsClick = () => {
+    navigate("/settings");
     setIsOpen(false);
   };
 
@@ -64,7 +64,7 @@ export default function optionsMenu() {
 
           <div className="options-section">
             <button
-              onClick={handleoptionsClick}
+              onClick={handleOptionsClick}
               role="menuitem"
               aria-label={t.options.settings_redirect}
               className="option-button"
