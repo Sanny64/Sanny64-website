@@ -57,8 +57,8 @@ export default function OptionsMenu() {
               aria-label={t.options.login_redirect}
               className="option-button"
             >
-              <LogInIcon size={20} />
-              <span>Login</span>
+              <LogInIcon className='option-icon'/>
+              <span className='option-description'>Login</span>
             </button>
           </div>
 
@@ -69,8 +69,8 @@ export default function OptionsMenu() {
               aria-label={t.options.settings_redirect}
               className="option-button"
             >
-              <LucideSettings size={20} />
-              <span>{t.options.settings}</span>
+              <LucideSettings className='option-icon'/>
+              <span className='option-description'>{t.options.settings}</span>
             </button>
           </div>
           
