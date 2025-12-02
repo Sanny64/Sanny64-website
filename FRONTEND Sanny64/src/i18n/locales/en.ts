@@ -31,6 +31,8 @@ export const en: Translations = {
     switch: 'Switch to:',
     german: 'German',
     english: 'English',
+    global: 'Global',
+    local: 'Local',
     theme: 'Theme',
     darkMode: 'Dark mode',
     lightMode: 'Light mode',

@@ -1,24 +1,27 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { ThemeProvider } from './context/ThemeProvider';
 import { LanguageProvider } from './context/LanguageProvider';
-import Main from './components/main/Main';
-import Home from './components/pages/home/Home';
-import About from './components/pages/about/About';
-import Projects from './components/pages/projects/Projects';
-import Portfolio from './components/pages/about/Portfolio';
-import Settings from './components/pages/settings/Settings';
+import Structure from './areas/Structure';
+import Home from './pages/home/Home';
+import About from './pages/about/About';
+import Portfolio from './pages/about/Portfolio';
+import Projects from './pages/projects/Projects';
+import Settings from './pages/settings/Settings'
 import './styles/globals.css';
-import './components/main/header/header.css';
-import './components/main/footer/footer.css';
-import './components/pages/home/home.css';
-import './components/pages/settings/settings.css';
+
+import './pages/home/home.css';
+import './pages/about/about.css';
+import './pages/about/portfolio.css';
+import './pages/projects/projects.css';
+import './pages/settings/settings.css';
+import './pages/settings/settings.css';
 
 function App() {
   return (
     <ThemeProvider>
       <LanguageProvider>
         <BrowserRouter>
-          <Main>
+          <Structure>
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/home" element={<Navigate to="/" replace />} />
@@ -28,7 +31,7 @@ function App() {
               <Route path="/settings" element={<Settings />} />
               <Route path="*" element={<Navigate to="/" replace />} />         
             </Routes>
-          </Main>
+          </Structure>
         </BrowserRouter>
       </LanguageProvider>
     </ThemeProvider>

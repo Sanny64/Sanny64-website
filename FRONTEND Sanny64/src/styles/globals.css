@@ -9,9 +9,9 @@
 
   /* Responsive typography scale */
   --font-size-xs: clamp(0.8rem, 0.75rem + 0.10vw, 0.9rem);
-  --font-size-sm: clamp(0.9rem, 0.85rem + 0.20vw, 1.05rem);
-  --font-size-base: clamp(1rem, 0.95rem + 0.40vw, 1.2rem);
-  --font-size-lg: clamp(1.125rem, 1.05rem + 0.60vw, 1.5rem);
+  --font-size-s: clamp(0.9rem, 0.85rem + 0.20vw, 1.05rem);
+  --font-size-m: clamp(1rem, 0.95rem + 0.40vw, 1.2rem);
+  --font-size-l: clamp(1.125rem, 1.05rem + 0.60vw, 1.5rem);
   --font-size-xl: clamp(1.25rem, 1.10rem + 0.90vw, 1.75rem);
   --font-size-2xl: clamp(1.5rem, 1.30rem + 1.20vw, 2.25rem);
   --font-size-3xl: clamp(1.75rem, 1.50rem + 1.50vw, 2.75rem);
@@ -44,12 +44,25 @@ body {
   line-height: var(--line-height-default);
 }
 
+.layout { 
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content { 
+  flex: 1;
+  padding: 1rem;
+  background-color: var(--bg-primary);
+  font-size: var(--font-size-base);
+}
+
 /* Generic accessibility helpers */
 .skip-link {
   position: absolute;
   top: -40px;
   left: 0;
-  background: var(--accent);
+  background: transparent;
   color: white;
   padding: 8px;
   text-decoration: none;

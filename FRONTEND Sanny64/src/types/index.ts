@@ -48,6 +48,8 @@ export interface Translations {
     switch: string;
     german: string;
     english: string;
+    global: string;
+    local: string;
     theme: string;
     darkMode: string;
     lightMode: string;

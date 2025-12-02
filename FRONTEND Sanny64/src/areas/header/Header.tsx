@@ -4,7 +4,7 @@ import Logo from './items/Logo';
 import NavBar from './items/Navbar';
 import OptionsMenu from './items/OptionsMenu';
 import { Menu, X, Settings } from 'lucide-react';
-import { useLanguage } from '../../../hooks/useLanguage';
+import { useLanguage } from '../../hooks/useLanguage';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

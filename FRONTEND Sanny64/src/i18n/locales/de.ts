@@ -31,6 +31,8 @@ export const de: Translations = {
     switch: 'Wechsle zu:',
     german: 'Deutsch',
     english: 'Englisch',
+    global: 'Globale',
+    local: 'Lokale',
     theme: 'Design',
     darkMode: 'Dunkler Modus',
     lightMode: 'Heller Modus',

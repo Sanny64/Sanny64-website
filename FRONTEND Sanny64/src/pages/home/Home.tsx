@@ -1,4 +1,4 @@
-import { useLanguage } from "../../../hooks/useLanguage";
+import { useLanguage } from "../../hooks/useLanguage";
 
 export default function Home() {
   const { t } = useLanguage();  

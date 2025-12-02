@@ -1,8 +1,0 @@
-/* Layout & main content styles */
-.layout { min-height: 100vh; display: flex; flex-direction: column; }
-.main-content { flex: 1; padding: 1rem; background-color: var(--bg-primary); font-size: var(--font-size-base); }
-
-@media (min-width: 768px) and (max-width: 1024px) {
-		.main-content { padding: 1.5rem; font-size: var(--font-size-lg); }
-		.content { font-size: var(--font-size-2xl); }
-}

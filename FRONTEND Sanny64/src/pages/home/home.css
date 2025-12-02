@@ -1,0 +1,11 @@
+/* Layout & main content styles */
+
+.content { font-size: var(--font-size-s) }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+	.content { font-size: var(--font-size-m) }
+}
+
+@media (min-width: 1025px) {
+	.content { font-size: var(--font-size-l) }
+}

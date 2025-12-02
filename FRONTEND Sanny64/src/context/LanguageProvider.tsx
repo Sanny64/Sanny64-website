@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import Cookies from 'js-cookie';
 import type { ReactNode } from 'react';
 import type { Language } from '../types';
-import { translations } from '../i18n';
+import { translations } from '../i18n/locale';
 import { LanguageContext } from './LanguageContext';
 
 interface LanguageProviderProps {

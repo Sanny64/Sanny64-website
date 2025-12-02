@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { MoreVertical, LogInIcon, LucideSettings } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
-import { useLanguage } from '../../../../hooks/useLanguage';
+import { useLanguage } from '../../../hooks/useLanguage';
 
 export default function OptionsMenu() {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,7 +44,7 @@ export default function OptionsMenu() {
         aria-haspopup="true"
         className="options-trigger"
       >
-        <MoreVertical size={24} aria-label={t.options.icon} role="image"/>
+        <MoreVertical className="options-icon" aria-label={t.options.icon} role="image"/>
       </button>
       
       {isOpen && (

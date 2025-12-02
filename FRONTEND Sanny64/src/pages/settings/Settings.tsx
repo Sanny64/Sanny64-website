@@ -1,7 +1,7 @@
 import { Moon, Sun, Languages, Check, Paintbrush } from 'lucide-react';
-import { useTheme } from '../../../hooks/useTheme';
-import { useLanguage } from '../../../hooks/useLanguage';
-import type { Language } from '../../../types';
+import { useTheme } from '../../hooks/useTheme';
+import { useLanguage } from '../../hooks/useLanguage';
+import type { Language } from '../../types';
 
 export default function Settings() {
   const { theme, toggleTheme } = useTheme();
@@ -101,7 +101,7 @@ export default function Settings() {
               <div className="settings-option-content">
                 <div className="settings-option-text">
                   <span className="settings-option-label">{t.settings.english}</span>
-                  <span className="settings-option-sublabel">{t.settings.english}</span>
+                  <span className="settings-option-sublabel">{t.settings.global}</span>
                 </div>
               </div>
               {language === 'en' && (
@@ -118,7 +118,7 @@ export default function Settings() {
               <div className="settings-option-content">
                 <div className="settings-option-text">
                   <span className="settings-option-label">{t.settings.german}</span>
-                  <span className="settings-option-sublabel">{t.settings.german}</span>
+                  <span className="settings-option-sublabel">{t.settings.local}</span>
                 </div>
               </div>
               {language === 'de' && (
