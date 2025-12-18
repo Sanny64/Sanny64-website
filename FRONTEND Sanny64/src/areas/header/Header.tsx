@@ -18,7 +18,7 @@ export default function Header() {
     <header className="header" role="banner">
       <div className="header-content">
         <div className="logo-section">
-          <Logo />
+          <Logo onClick={() => setIsMenuOpen(false)} />
           <span className="copyright-text">{t.nav.coded_by}</span>
         </div>
         
